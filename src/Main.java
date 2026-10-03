@@ -1,16 +1,44 @@
 import javax.crypto.SecretKey;
+import javax.swing.*;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
 
-        //instantiate generic creature
-        Creature entity = new Creature("Gringotts", 8);
+        //array to hold any creature
+        ArrayList<Creature> creatureRoster = new ArrayList<>();
+
+        //instances of different subclasses
+        creatureRoster.add(new Dragon("Gringotts", 8, 18.8));
+        creatureRoster.add(new Spirit("Dementor", 10, "Amortal Non-Being"));
+        creatureRoster.add(new Golem("Bore", 5, "Plutonium"));
+
+        System.out.println("--- Captured Entity Report ---");
+        System.out.println();
+
+        //iterate through roster
+        for(Creature entity : creatureRoster) {
+            System.out.println("Creature Name: " + entity.getName());
+            System.out.println("Threat Level: " + entity.getThreatLevel());
+            entity.react();
+            System.out.println();
+        }
+
+
+
+
+
+
+
+        //test code//
+        /*Creature entity = new Creature("Gringotts", 8);
         //attributes
         System.out.println("--- Captured Entity Report ---");
         System.out.println("Creature Name: " + entity.getName());
         System.out.println("Threat Level: " + entity.getThreatLevel());
-        //call react method
         entity.react();
+        System.out.println();
 
         Creature entity2 = new Dragon("Pixel", 4, 14.5);
         Creature entity3 = new Spirit("Dementor", 10, "Amortal Non-Beings");
@@ -23,7 +51,7 @@ public class Main {
         System.out.println();
         System.out.println("Creature Name: " + entity3.getName());
         System.out.println("Threat Level: " + entity3.getThreatLevel());
-        entity3.react();
+        entity3.react();*/
 
     }
 }

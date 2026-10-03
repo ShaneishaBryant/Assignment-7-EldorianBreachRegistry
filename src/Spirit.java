@@ -8,7 +8,7 @@ public class Spirit extends Creature {
 
     @Override
     public void react(){
-        System.out.println(getName() + " creates a heavy, suffocating atmosphere that clouds the Royal Guards judgement. ");
+        System.out.println(getName() + " is a " + supernaturalType + " that creates a heavy, suffocating atmosphere.");
     }
 
     public String getEtherealType(){

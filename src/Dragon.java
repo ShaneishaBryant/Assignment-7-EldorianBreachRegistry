@@ -1,17 +1,17 @@
 public class Dragon extends Creature {
-    private double wingSpan;
+    private double wingSpanMeter;
 
-    public Dragon(String name, int threatLevel, double wingSpan){
+    public Dragon(String name, int threatLevel, double wingSpanMeter){
         super(name, threatLevel);
-        this.wingSpan = wingSpan;
+        this.wingSpanMeter = wingSpanMeter;
     }
 
     @Override
     public void react(){
-        System.out.println(getName() + " breathes out a brilliant blue flame that can reduce timbers and bones to ashes instantly!");
+        System.out.println(getName() + " wingspan is " + wingSpanMeter + " meters and it breathes out a brilliant blue flame.");
     }
 
-    public double getWingSpan(){
-        return wingSpan;
+    public double getWingSpanMeter(){
+        return wingSpanMeter;
     }
 }
