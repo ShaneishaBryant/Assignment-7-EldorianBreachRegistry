@@ -3,3 +3,13 @@ Why is it a good idea to create a shared Creature superclass rather than buildin
 
 Creating a shared superclass promotes code reusability and enables centralized management by grouping related objects under a single type. Subclasses inherit baseline attributes and behaviors while retaining the flexibility to override specific methods without breaking the system. When new entities are added, the existing codebase accommodates them automatically without requiring refactoring.
 
+
+
+
+_____________
+
+
+
+Describe the “IS-A” relationship between one of your subclasses and the Creature base class. How does inheritance help reduce duplicate code across the different creature classes?
+
+The "IS-A" relationship dictates that a Dragon IS-A Creature, meaning it automatically inherits all shared state and behavior from the Creature superclass. Inheritance eliminates code duplication, centralizes core attributes, and enables unified processing through polymorphism. Without it, every creature type would have to be written as a completely standalone class, repeating fundamental attributes like name and threatLevel.
