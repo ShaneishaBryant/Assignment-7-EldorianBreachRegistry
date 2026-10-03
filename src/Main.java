@@ -14,16 +14,23 @@ public class Main {
         creatureRoster.add(new Spirit("Dementor", 10, "Amortal Non-Being"));
         creatureRoster.add(new Golem("Bore", 5, "Plutonium"));
 
-        System.out.println("--- Captured Entity Report ---");
+        System.out.println("====R.E.M.S. (Royal Entity Management System)====");
         System.out.println();
+        System.out.println("--------CAPTURED ENTITY REPORT--------");
 
         //iterate through roster
         for(Creature entity : creatureRoster) {
-            System.out.println("Creature Name: " + entity.getName());
-            System.out.println("Threat Level: " + entity.getThreatLevel());
+            entity.verifyContainment();
+
+            /*System.out.println("Creature Name: " + entity.getName());
+            System.out.println("Threat Level: " + entity.getThreatLevel());*/
+
+            System.out.print("Interaction: ");
             entity.react();
-            System.out.println();
+            System.out.println("------------------------------------------------------------------");
         }
+
+
 
 
 

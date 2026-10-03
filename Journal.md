@@ -23,3 +23,12 @@ Explain how polymorphism allows you to treat different types of objects uniforml
 Polymorphism allows you to invoke superclass methods on any array element without needing to know its specific subclass type upfront. 
 
 Adding a new creature type later requires zero changes to the loop because the code depends on the general superclass rather than concrete subclasses—allowing you to extend the system without modifying or recompiling existing iteration logic.
+
+
+
+_______________
+
+Why would an architect choose to mark a method as final? What risks does it prevent when multiple developers are extending a class hierarchy?
+
+An architect marks a method as final to lock its logic, ensuring no subclass can alter how that specific task runs or break the system's fundamental rules. 
+This prevents major risks, such as accidentally overriding critical baseline methods, introducing fragile base class bugs, or disrupting required execution sequences.
